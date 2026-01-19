@@ -42,3 +42,20 @@ Implementation to be added incrementally.
 ---
 
 Built under UStack Solutions.
+## AWS Mapping (Conceptual)
+
+This experiment maps conceptually to the following AWS services:
+
+- **Data ingestion**: Amazon S3, AWS Glue
+- **Data preprocessing**: SageMaker Processing Jobs, AWS Glue DataBrew
+- **Model training**: Amazon SageMaker Training Jobs
+- **Model evaluation**: SageMaker Processing
+- **Deployment (future)**: SageMaker Endpoints or Batch Transform
+- **Monitoring (future)**: SageMaker Model Monitor, Amazon CloudWatch
+The following steps outline how this concept-level experiment will evolve into a more complete ML workflow:
+## Next Steps
+
+- Add a small synthetic dataset for hands-on validation
+- Implement basic preprocessing and validation logic
+- Extend the pipeline to support batch inference
+- Explore orchestration using SageMaker Pipelines
