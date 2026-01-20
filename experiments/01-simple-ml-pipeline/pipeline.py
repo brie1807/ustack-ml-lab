@@ -1,56 +1,51 @@
 """
 Experiment 01: Simple ML Pipeline (Concept-Level)
 
-This file represents a conceptual machine learning pipeline.
-The purpose is to document system structure before implementation.
+This file demonstrates the logical flow of a machine learning pipeline
+without focusing on model complexity.
 
-Focus:
-- Data flow
-- Separation of concerns
-- ML lifecycle awareness
+Goal: Understand system structure, not algorithms.
 """
 
 def ingest_data():
-    """
-    Data ingestion step.
-    In production, this could read from S3, a database, or a stream.
-    """
-    pass
+    print("Step 1: Ingesting data...")
+    # Simulated data
+    data = [100, 200, 300, 400, 500]
+    return data
 
 
 def preprocess_data(data):
-    """
-    Data preprocessing and validation.
-    Feature engineering and schema checks would occur here.
-    """
-    pass
+    print("Step 2: Preprocessing data...")
+    # Simple transformation
+    processed = [x / 100 for x in data]
+    return processed
 
 
 def train_model(processed_data):
-    """
-    Model training step.
-    Intentionally simple for interpretability.
-    """
-    pass
+    print("Step 3: Training model...")
+    # Simulated "model"
+    model = sum(processed_data) / len(processed_data)
+    return model
 
 
-def evaluate_model(model, test_data):
-    """
-    Model evaluation.
-    Focus on understanding metrics, not optimization.
-    """
-    pass
+def evaluate_model(model):
+    print("Step 4: Evaluating model...")
+    # Fake evaluation metric
+    score = round(model * 10, 2)
+
+    return score
 
 
 def run_pipeline():
-    """
-    Orchestrates the ML pipeline.
-    """
     data = ingest_data()
     processed_data = preprocess_data(data)
     model = train_model(processed_data)
-    evaluate_model(model, processed_data)
+    score = evaluate_model(model)
+
+    print("Step 5: Output")
+    print(f"Final evaluation score: {score}")
 
 
 if __name__ == "__main__":
     run_pipeline()
+
